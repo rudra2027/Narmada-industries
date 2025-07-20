@@ -1,0 +1,123 @@
+{
+  "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
+  "version": 1,
+  "newProjectRoot": "projects",
+  "projects": {
+    "industry": {
+      "projectType": "application",
+      "schematics": {},
+      "root": "",
+      "sourceRoot": "src",
+      "prefix": "app",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:application",
+          "options": {
+            "outputPath": "dist/industry",
+            "index": "src/index.html",
+            "browser": "src/main.ts",
+            "polyfills": [
+              "zone.js"
+            ],
+            "tsConfig": "tsconfig.app.json",
+            "assets": [
+              "src/favicon.ico",
+              "src/assets"
+            ],
+            "styles": [
+              "src/styles.css",
+              "node_modules/ngx-owl-carousel-o/lib/styles/prebuilt-themes/owl.carousel.min.css",
+              "src/assets/plugins/revolution/revolution/css/revolution.min.css"
+            ],
+            "scripts": [
+              "src/assets/js/jquery.min.js",
+              "src/assets/plugins/wow/wow.js",
+              "src/assets/plugins/bootstrap/js/popper.min.js",
+              "src/assets/plugins/bootstrap/js/bootstrap.min.js",
+              "src/assets/plugins/bootstrap/js/bootstrap-select.min.js",
+              "src/assets/plugins/bootstrap-touchspin/jquery.bootstrap-touchspin.js",
+              "src/assets/plugins/magnific-popup/magnific-popup.js",
+              "src/assets/plugins/counter/waypoints-min.js",
+              "src/assets/plugins/counter/counterup.min.js",
+              "src/assets/plugins/imagesloaded/imagesloaded.js",
+              "src/assets/plugins/masonry/masonry-3.1.4.js",
+              "src/assets/plugins/masonry/masonry.filter.js",
+              "src/assets/plugins/owl-carousel/owl.carousel.js",
+              "src/assets/plugins/lightgallery/js/lightgallery.js",
+              "src/assets/js/dz.carousel.js",
+              "src/assets/js/dz.ajax.js",
+              "src/assets/js/jquery.lazy.min.js",
+              "src/assets/plugins/revolution/revolution/js/jquery.themepunch.tools.min.js",
+              "src/assets/plugins/revolution/revolution/js/jquery.themepunch.revolution.min.js",
+              "src/assets/js/rev.slider.js",
+              "src/assets/js/jquery.star-rating-svg.js",
+              "src/assets/js/custom.js"
+            ]
+          },
+          "configurations": {
+            "production": {
+              "budgets": [
+                {
+                  "type": "initial",
+                  "maximumWarning": "8mb",
+                  "maximumError": "8mb"
+                },
+                {
+                  "type": "anyComponentStyle",
+                  "maximumWarning": "5mb",
+                  "maximumError": "5mb"
+                }
+              ],
+              "outputHashing": "all"
+            },
+            "development": {
+              "optimization": false,
+              "extractLicenses": false,
+              "sourceMap": true
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "serve": {
+          "builder": "@angular-devkit/build-angular:dev-server",
+          "configurations": {
+            "production": {
+              "buildTarget": "industry:build:production"
+            },
+            "development": {
+              "buildTarget": "industry:build:development"
+            }
+          },
+          "defaultConfiguration": "development"
+        },
+        "extract-i18n": {
+          "builder": "@angular-devkit/build-angular:extract-i18n",
+          "options": {
+            "buildTarget": "industry:build"
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "polyfills": [
+              "zone.js",
+              "zone.js/testing"
+            ],
+            "tsConfig": "tsconfig.spec.json",
+            "assets": [
+              "src/favicon.ico",
+              "src/assets"
+            ],
+            "styles": [
+              "src/styles.css"
+            ],
+            "scripts": []
+          }
+        }
+      }
+    }
+  },
+  "cli": {
+    "analytics": false
+  }
+}
