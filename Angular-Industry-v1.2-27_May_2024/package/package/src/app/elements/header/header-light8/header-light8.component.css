@@ -1,12 +1,23 @@
-.logo-header h1{
+.logo-header h1 {
     color: white;
-    font-family: 'Montserrat', sans-serif; /* Stylish font */
+    font-family: 'Montserrat', sans-serif;
     font-weight: 700;
     letter-spacing: 2px;
     text-transform: uppercase;
     font-size: 3rem;
     margin: 0;
-    margin-left: 235px;
+    margin-left: 259px;
     display: ruby;
     animation: fadeInLogo 1s ease-out forwards;
 }
+
+/* Responsive styles for phone view */
+@media (max-width: 768px) {
+    .logo-header h1 {
+        font-size: 1.8rem;          /* Adjust font size for smaller screens */
+        margin-left: 20px;          /* Reduce left margin */
+        text-align: center;         /* Optional: center text */
+        display: block;             /* Better layout for narrow screens */
+    }
+}
+
