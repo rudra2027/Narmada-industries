@@ -1,22 +1,22 @@
 <header class="site-header mo-left header-transparent header navstyle3">
     <!-- main header -->
     <div class="sticky-header main-bar-wraper navbar-expand-lg">
-        <div class="main-bar clearfix ">
+        <div class="main-bar clearfix" style="background-color: rgb(210, 21, 30);">
             <div class="container clearfix">
                 <!-- website logo -->
-                <div class="logo-header">
-                    <a>
-                        <h1>
-                            N.K. GOUR INDUSTRIES
-                        </h1>
-                    </a>
+                <div class="logo-header mostion">        
+			<a> <img src="assets/images/logonk.png" alt="NK GOUR INDUSTRIES"/>
+			</a>
                 </div>
                 <!-- nav toggle button -->
-                <button class="navbar-toggler collapsed navicon justify-content-end" type="button" (click)="clickEvent()" [ngClass]="{'open': collapseToggle}">
+                <!--
+	        <button class="navbar-toggler collapsed navicon justify-content-end" type="button" (click)="clickEvent()" [ngClass]="{'open': collapseToggle}">
+		
           <span></span>
           <span></span>
           <span></span>
         </button>
+		-->
                 <!-- extra nav -->
 		<!--
                 <div class="extra-nav">
@@ -37,14 +37,13 @@
 		<!-- main nav -->
                 <div class="header-nav navbar-collapse collapse justify-content-end" id="navbarNavDropdown" [ngClass]="{'collapse show': collapseToggle}">
                     <div class="logo-header d-md-block d-lg-none">
-			    <a>
-                            <h1>
-                                N.K. GOUR INDUSTRIES
-                            </h1>
+			<a>
+		        <h1><img src="assets/images/logonk.png" alt="NK GOUR INDUSTRIES"   style="margin-left: 64px;"/>
+			</h1>
                         </a>
                     </div>
 		    <!--<app-navigation1/>-->
-		
+		    <!--
                     <div class="dlab-social-icon">
                         <ul>
                             <li>
@@ -61,6 +60,7 @@
                             </li>
                         </ul>
                     </div>
+		    -->
                 </div>
             </div>
         </div>
